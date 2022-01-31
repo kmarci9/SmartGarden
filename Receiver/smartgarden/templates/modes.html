@@ -1,0 +1,147 @@
+
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Smartgarden</title>
+  <meta name="description" content="Smartgarden OE-NIK Szakdolgozat2" />
+  <meta name="keywords" content="smartgarden oenik brr" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="{% static 'style/modestyle.css' %}" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="{% static 'utils.js' %}"></script>
+    <script type='text/javascript'>
+      function GetMap() {
+          var long = {{ long }}
+          var lat = {{ lat }}
+          var map = new Microsoft.Maps.Map('#myMap', {
+              credentials: 'AkteEWSXA9VhmG06xXC5ZK_2F_vGvVl1RN7eJkZlYnr1CtUKgK2fjkEL_CLyoSAp',
+              center: new Microsoft.Maps.Location(lat, long)
+          });
+  
+          var center = map.getCenter();
+  
+          //Create custom Pushpin
+          var pin = new Microsoft.Maps.Pushpin(center, {
+              title: '',
+              subTitle: '',
+              text: '1'
+          });
+  
+          //Add the pushpin to the map
+          map.entities.push(pin);
+      }
+      </script>
+      <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+</head>
+
+
+
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Smart<span class="logo_colour">garden</span></a></h1>
+          <h2>Using Lora protocol and ESP32 microcontroller.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li class="selected"><a href="modes.html">Mode Selection</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="banner"></div>
+
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Current mode:  {{ mode }}</h1> 
+        <h1>Longitude:  {{ long }}</h1> 
+        <h1>Latitude:  {{ lat }}</h1>
+        <h1>Precipitation in your location for the next 10 days:  {{ precip }}mm</h1> 
+        
+        <br>
+
+        <div>
+        <div id="allit" style="display: inline;">Set Mode:  </div>
+        {% if mode != "MANUAL" %}
+        <div style="display: inline;">
+          <form style="display:inline-block" class="setmode" action='setManual' method='GET'>
+
+            <button class="setbutton" type="submit" value="true" name="setmanual">Manual</button>
+          </form>
+        </div>
+
+        {% else %}
+        
+        <div>
+          <form style="display:inline-block" class="setmode" action='setAuto' method='GET'>
+            <button class="setbutton" type="submit" value="true" name="setauto">Auto</button>
+          </form>
+        </div>
+
+        {% endif %}
+      </div>
+      <br>
+
+
+        {% if mode == "MANUAL" %}
+          <br><br>
+
+          <form action='startWater' method='GET'>
+            <button type="submit" value="true" name="startwater">Start Watering</button>
+          </form>
+          <form action='stopWater' method='GET'>
+            <button type="submit" value="true" name="stopwater">Stop Watering</button>
+          </form>
+        {% else %}
+          <div>
+          <div style="display: inline;">
+            <form style="display:inline-block" action="setLong" method="get">
+              <div id="allit2" style="display: inline;">Set Longitude:</div>
+              <input id="autoinput" type="text" value={{long}} name="longtxtbox" size="1"/>
+              <input id="setbtn" type="submit" class="btn" value="Set" name="mybtn">
+            </form>
+          </div>
+        </div>
+          <br>
+          <div style="display: inline;">
+            <form style="display:inline-block" action="setLat" method="get">
+              <div id="allit2" style="display: inline;">Set Latitude:</div>
+                <input id="autoinput" type="text" value={{lat}} name="lattxtbox" size="1"/>
+                <input id="setbtn" type="submit" class="btn" value="Set" name="mybtn">
+            </form>
+          </div>
+          <!--The div element for the map -->
+
+        <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+
+        {% endif %}
+
+
+		
+
+		
+    
+		
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">Location</a></p>
+    </div>
+  </div>
+</body>
+</html>

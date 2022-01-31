@@ -1,0 +1,172 @@
+2021/10/30-20:56:42,666 root INFO STARTED FUNCTION
+2021/10/30-21:02:03,605 root INFO STARTED FUNCTION
+2021/10/30-21:04:23,51 root INFO STARTED FUNCTION
+2021/10/30-21:04:23,53 root INFO Watering at 10/30/2021
+2021/10/30-21:04:59,96 root INFO currentmode is not AUTO quiting
+2021/10/30-21:04:59,97 root INFO EXITED 10/30/2021
+2021/10/30-21:47:18,902 root INFO STARTED FUNCTION
+2021/10/30-21:47:18,959 root INFO currentmode is not AUTO quiting
+2021/10/30-21:47:18,960 root INFO EXITED 
+2021/10/30-21:47:19,167 django.request ERROR Internal Server Error: /setAuto
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 311, in check_response
+    "instead." % name
+ValueError: The view smartgardenapp.views.autoClick didn't return an HttpResponse object. It returned None instead.
+2021/10/30-21:56:22,818 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/10/30-21:56:22,820 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-21:56:31,788 root INFO STARTED FUNCTION
+2021/10/30-21:56:32,21 django.request ERROR Internal Server Error: /setAuto
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 311, in check_response
+    "instead." % name
+ValueError: The view smartgardenapp.views.autoClick didn't return an HttpResponse object. It returned None instead.
+2021/10/30-21:57:35,179 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/10/30-21:57:35,181 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-21:57:42,578 root INFO STARTED FUNCTION
+2021/10/30-21:57:42,582 root INFO Watering at 10/30/2021
+2021/10/30-21:57:42,831 django.request ERROR Internal Server Error: /setAuto
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 311, in check_response
+    "instead." % name
+ValueError: The view smartgardenapp.views.autoClick didn't return an HttpResponse object. It returned None instead.
+2021/10/30-21:58:48,202 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/10/30-21:58:48,203 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-21:58:58,675 root INFO STARTED FUNCTION
+2021/10/30-21:58:58,941 django.request ERROR Internal Server Error: /setAuto
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 311, in check_response
+    "instead." % name
+ValueError: The view smartgardenapp.views.autoClick didn't return an HttpResponse object. It returned None instead.
+2021/10/30-22:17:46,829 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-22:21:07,99 root INFO STARTED FUNCTION
+2021/10/30-22:21:07,104 root INFO Watering at 10/30/2021
+2021/10/30-22:21:48,152 root INFO currentmode is not AUTO quiting
+2021/10/30-22:21:48,152 root INFO EXITED 10/30/2021
+2021/10/30-22:23:30,560 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/10/30-22:23:30,562 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-22:24:15,808 root INFO STARTED FUNCTION
+2021/10/30-22:26:09,426 root INFO STARTED FUNCTION
+2021/10/30-22:26:09,428 root INFO currentmode is not AUTO quiting
+2021/10/30-22:26:09,428 root INFO EXITED 
+2021/10/30-22:26:20,415 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-22:26:33,166 root INFO STARTED FUNCTION
+2021/10/30-22:26:33,167 root INFO currentmode is not AUTO quiting
+2021/10/30-22:26:33,168 root INFO EXITED 
+2021/10/30-22:27:57,23 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/10/30-22:27:57,26 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-22:30:09,542 root INFO STARTED FUNCTION
+2021/10/30-22:32:54,35 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/10/30-22:32:54,36 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-22:42:24,525 root INFO STARTED FUNCTION
+2021/10/30-22:42:24,533 root INFO Watering at 10/30/2021
+2021/10/30-22:42:30,541 root INFO currentmode is not AUTO quiting
+2021/10/30-22:42:30,542 root INFO EXITED 10/30/2021
+2021/10/30-22:42:36,467 asyncio DEBUG Using selector: EpollSelector
+2021/10/30-22:42:50,308 root INFO STARTED FUNCTION
+2021/10/30-22:42:50,317 root INFO Watering at 10/30/2021
+2021/10/31-10:23:48,244 django.request WARNING Not Found: /favicon.ico
+2021/10/31-17:17:24,795 django.request WARNING Not Found: /favicon.ico
+2021/10/31-19:00:11,831 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/10/31-19:00:11,832 asyncio DEBUG Using selector: EpollSelector
+2021/11/06-19:50:13,805 root INFO STARTED FUNCTION
+2021/11/06-19:50:13,807 root INFO Watering at 11/06/2021
+2021/11/06-19:58:50,440 root INFO currentmode is not AUTO quiting
+2021/11/06-19:58:50,440 root INFO EXITED 11/06/2021
+2021/11/06-23:34:05,118 asyncio DEBUG Using selector: EpollSelector
+2021/11/07-15:41:49,431 root INFO STARTED FUNCTION
+2021/11/07-15:41:49,433 root INFO Watering at 11/07/2021
+2021/11/07-15:44:05,579 root INFO currentmode is not AUTO quiting
+2021/11/07-15:44:05,580 root INFO EXITED 11/07/2021
+2021/11/07-16:57:03,736 root INFO STARTED FUNCTION
+2021/11/07-16:57:03,737 root INFO Watering at 11/07/2021
+2021/11/07-16:57:18,327 django.request ERROR Internal Server Error: /setLong
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pi/planter/django/smartgarden/smartgardenapp/views.py", line 176, in setlong
+    long = float(str(request.GET.get('longtxtbox')))
+ValueError: could not convert string to float: 
+2021/11/07-16:58:25,808 django.request ERROR Internal Server Error: /setLong
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pi/planter/django/smartgarden/smartgardenapp/views.py", line 176, in setlong
+    long = float(str(request.GET.get('longtxtbox')))
+ValueError: could not convert string to float: 
+2021/11/07-16:58:31,254 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/07-16:58:31,256 asyncio DEBUG Using selector: EpollSelector
+2021/11/09-19:29:54,494 root INFO STARTED FUNCTION
+2021/11/09-19:29:54,496 root INFO Watering at 11/09/2021
+2021/11/09-19:31:56,376 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/templates/modes.html changed, reloading.
+2021/11/09-19:31:56,377 asyncio DEBUG Using selector: EpollSelector
+2021/11/09-19:32:01,753 root INFO STARTED FUNCTION
+2021/11/09-19:32:01,759 root INFO Watering at 11/09/2021
+2021/11/09-19:32:17,780 root INFO currentmode is not AUTO quiting
+2021/11/09-19:32:17,780 root INFO EXITED 11/09/2021
+2021/11/09-19:33:22,172 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/templates/modes.html changed, reloading.
+2021/11/09-19:33:22,173 asyncio DEBUG Using selector: EpollSelector
+2021/11/09-19:36:10,112 root INFO STARTED FUNCTION
+2021/11/09-19:36:10,114 root INFO Watering at 11/09/2021
+2021/11/09-19:38:34,595 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/templates/modes.html changed, reloading.
+2021/11/09-19:38:34,597 asyncio DEBUG Using selector: EpollSelector
+2021/11/09-19:38:37,777 root INFO STARTED FUNCTION
+2021/11/09-19:38:37,784 root INFO Watering at 11/09/2021
+2021/11/09-19:41:09,214 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/templates/modes.html changed, reloading.
+2021/11/09-19:41:09,216 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-22:50:38,261 root INFO STARTED FUNCTION
+2021/11/12-22:51:55,622 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-22:51:55,624 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-22:52:51,80 root INFO STARTED FUNCTION
+2021/11/12-22:54:21,57 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-22:54:21,59 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-22:54:25,448 root INFO STARTED FUNCTION
+2021/11/12-22:55:06,902 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-22:55:06,903 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-22:55:11,778 root INFO STARTED FUNCTION
+2021/11/12-22:56:12,693 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-22:56:12,695 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-22:56:21,72 root INFO STARTED FUNCTION
+2021/11/12-22:57:21,242 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-22:57:21,243 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-22:57:29,203 root INFO STARTED FUNCTION
+2021/11/12-23:02:36,285 django.request WARNING Not Found: /favicon.ico
+2021/11/12-23:02:43,618 root INFO STARTED FUNCTION
+2021/11/12-23:02:50,420 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-23:02:50,422 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-23:02:54,500 root INFO STARTED FUNCTION
+2021/11/12-23:05:51,7 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-23:05:51,9 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-23:05:55,623 root INFO STARTED FUNCTION
+2021/11/12-23:08:36,211 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-23:08:36,213 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-23:08:39,860 root INFO STARTED FUNCTION
+2021/11/12-23:09:02,470 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-23:09:02,472 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-23:09:05,550 root INFO STARTED FUNCTION
+2021/11/12-23:10:30,551 django.utils.autoreload INFO /home/pi/planter/django/smartgarden/smartgardenapp/views.py changed, reloading.
+2021/11/12-23:10:30,552 asyncio DEBUG Using selector: EpollSelector
+2021/11/12-23:10:33,727 root INFO STARTED FUNCTION
+2021/11/12-23:10:33,805 root INFO Watering at 11/12/2021
+2021/11/12-23:28:47,381 root INFO currentmode is not AUTO quiting
+2021/11/12-23:28:47,382 root INFO EXITED 11/12/2021
+2021/11/12-23:28:55,174 asyncio DEBUG Using selector: EpollSelector

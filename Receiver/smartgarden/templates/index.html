@@ -1,0 +1,154 @@
+
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Smartgarden</title>
+  <meta name="description" content="Smartgarden OE-NIK Szakdolgozat2" />
+  <meta name="keywords" content="smartgarden oenik brr" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="{% static 'utils.js' %}"></script>
+</head>
+
+
+
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Smart<span class="logo_colour">garden</span></a></h1>
+          <h2>Using Lora protocol and ESP32 microcontroller.</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="modes.html">Mode selection</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="banner"></div>
+
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Last 20 recorded data</h1>
+		
+
+		
+    <canvas id="myChart" width="400" height="400"></canvas>
+		{% block js %}
+    <script>
+
+
+      var areaChartCanvas = document.getElementById('myChart').getContext('2d');
+
+      //context-ből a hőmérséklet adatok kiszedése
+      var temperatures = [
+      {% for item in temperature %}
+        {{item.temperature}},
+      {% endfor %}
+      ]
+
+      //context-ből az idő adatok kiszedése
+      var timeline = [
+      {% for item in created %}
+        "{{item.created|date:'H:i'}}",
+      {% endfor %}
+      ]
+
+      var soil = [
+      {% for item in soil %}
+        {{item.soil}},
+      {% endfor %}
+      ]
+
+
+      
+      var config = {
+            type: 'line',
+            data: {
+                labels: timeline,
+                datasets: [{
+                    label: "Temperature",
+                    backgroundColor: window.chartColors.red,
+                    borderColor: window.chartColors.red,
+                    data: temperatures,
+                    fill: false,
+                    cubicInterpolationMode: 'monotone',
+                  },{
+                    label: "Soil Humidity%",
+                    fill: false,
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    data: soil,
+                    cubicInterpolationMode: 'monotone',
+                  } 
+
+                ]
+            },
+            options: {
+                responsive: true,
+                title:{
+                    display:true,
+                    text:'Temperature Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Values'
+                        }
+                    }]
+                }
+            }
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById("myChart").getContext("2d");
+            window.myLine = new Chart(ctx, config);
+        };
+
+
+    </script>
+    
+		
+		{% endblock %}
+		
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="modes.html">Set a mode</a></p>
+    </div>
+  </div>
+</body>
+</html>
